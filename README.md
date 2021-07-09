@@ -4,5 +4,5 @@ Sports present a vast amount of data that have been used to create a whole new p
 
 
  ## Initial Prototype
-
+To determine race predictibility we initially prototyped a logistic regressor to predict the outcome based starting position and circuit ID 
     
