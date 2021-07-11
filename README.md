@@ -13,8 +13,8 @@ The team got access to data directly from F1 through Kaggle and upon initial ana
 
 ## Question we would like to answer through ML-Model:
 
-1) Are Races to Predictable?
-2) Can we create segmented race strategies for Formula1 constructors depending of circuit level historical performance?
+1) Are Races too Predictable?
+2) Can we create segmented race strategies for Formula1 constructors depending on circuit level historical performance?
 
  ## Race Predictability: Initial Model
  During [exploratory analysis](https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Trial%20Code%20-%20ML%20-%20Shah/shah_ML_ETL.ipynb) our data consisted of starting position, ending position, driver ID and many other columns which would provide a great starting point to build the initial [machine learning model](https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Trial%20Code%20-%20ML%20-%20Shah/Race_Predictor.ipynb). We further cleaned the data and decided to train our model using the circuitID, driverID, constructorID and starting positoin labels. 
