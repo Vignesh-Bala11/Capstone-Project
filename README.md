@@ -1,4 +1,4 @@
-# Race Predictibility of Formula 1
+# Race Predictibility of Formula 1 :racing_car: :checkered_flag:
 
 Sports present a vast amount of data that have been used to create a whole new paradigm of performance, team management and strategies. One sport that seems to have an over-reliance of data analysis is Formula 1 (F1). Formula 1 represents the pinnacle of automotive technology with hundreds of cars being fitted with state-of-the-art sensors generating significant amount of data, approximately 3gb per race along with 1500 datapoints, which teams monitor to determine tire performance, driver performance, track conditions etc. Few sports rely on the use of data analytics as extensively as F1 and as such major Technology companies such as Amazon Web Services, Qualcomm Technologies, Splunk all have major strategic relations with the competing teams. 
 
@@ -22,4 +22,8 @@ The team got access to data directly from F1 through Kaggle and upon initial ana
  
  ## Segmented Race Strategies: Initial Model
  Post [exploratory analysis](https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Trial%20Code%20-%20ML%20-%20Rama/races_ETL.ipynb), our data consisted of data on the finishing status for each driver and constructor for each circuit over the last few decades. This would help us build a [model](https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Trial%20Code%20-%20ML%20-%20Rama/initialML.ipynb) that would cluster historical performance of constructors depending on the circuits. Further cleaning of data can result in clusters which can help us add qualitative inputs to algorithm-created clusters to output segmented race strategies instead of a vanilla strategy for all races. 
-    
+
+## Communications protocol
+We created a Slack group amongst the contributors which was the major communication channel. The idea was to brainstorm things out as they came up and the slack channel served as a medium to help troubleshoot things.
+
+We also had a biweekly zoom meeting cadence to discuss the larger picture and for course correction of the project, if needed.
