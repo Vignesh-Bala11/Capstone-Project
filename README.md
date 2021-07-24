@@ -33,13 +33,59 @@ We created a Slack group amongst the contributors which was the major communicat
 We also have zoom meeting cadence set up twice a week, to discuss the larger picture and for course correction of the project, if needed.
 
 ## Exploratory Analysis
-### Nationality of Racer vs Wins in Home Country
+### 1. Nationality of Racer vs Wins in Home Country
 This analysis attempts to identify if there is a higher likelihood for a racer to win a race in their home country. A new home win column was created with a Yes or No if the racer nationality and country of the race are the same. A win is defined as any of the top three positions. To visualize the results of the analysis, a bar chart and pie chart are used.
 
 ![image](https://user-images.githubusercontent.com/76491891/126873338-0f32c13d-4be8-4873-a0e7-636fc41b8d53.png)
 
-British nationality racers have the highest home wins.
+- British nationality racers have the highest home wins.
 
 ![image](https://user-images.githubusercontent.com/76491891/126873359-7d127860-0cc5-42b6-a6ba-91e110de9d62.png)
 
-Only 8.1% of the racers have won in their home country.
+- Only 8.1% of the racers have won in their home country.
+
+### 2. Correlation between First Lap Position vs Final Position 
+This analysis summarizes the final race position for a racer leading in the first lap.
+
+![image](https://user-images.githubusercontent.com/76491891/126873469-d3ef418b-446a-4346-b20e-adfc4812a14f.png)
+
+- If the racer finishes his first lap position as one, there is a 55.2% chance to win the race in first position. 
+- If the racer finishes his first lap position as one, there is a 21.6% chance to win the race in second or third position. 
+- If the racer finishes his first lap position as one, there is a 23.1% chance to not win a podium position. 
+
+### 3.	Correlation between Fifth Lap Position vs Final Position 
+This analysis summarizes the final race position for a racer leading in the fifth lap.
+
+![image](https://user-images.githubusercontent.com/76491891/126873572-d277a774-42c9-48c0-baa2-d90b04b84598.png)
+
+- If the racer finishes his fifth lap position as one, there is a 57.9% chance to win the race in first position. 
+- If the racer finishes his fifth lap position as one, there is a 19.9% chance to win the race in second or third position. 
+- If the racer finishes his fifth lap position as one, there is a 22.3% chance to not win a podium position. 
+
+### 4.	Constructor Performance in Various Altitudes
+The altitude ranges are classified into two buckets, < 100 and > 100. 
+
+![image](https://user-images.githubusercontent.com/76491891/126873607-5c039293-9aa2-42b3-9bcf-90b0cfd20406.png)
+
+- If the altitude range is < 100, Mercedes has the most average constructor points.
+
+![image](https://user-images.githubusercontent.com/76491891/126873690-c7f80dc7-8a8f-40da-8ba8-9fefc4c5ced5.png)
+
+- If the altitude range is > 100, Mercedes has the most average constructor points.
+
+### 5.	Correlation between Pit Stops vs Points by Circuits and Constructors 
+The correlation between pit stops and points for the Albert Park Grand Prix circuit was performed. Similar analysis can be performed for any desired circuit. 
+
+![image](https://user-images.githubusercontent.com/76491891/126873723-8b3ef08a-9806-4c23-b764-d8908413c064.png)
+
+- The correlation between stops and milliseconds is 0.83, which can be considered highly correlated.
+- The correlation between stops and points is 0.59, which can be considered moderately correlated.
+- The correlation between milliseconds and points is 0.55, which can be considered moderately correlated.
+
+The correlation between pit stops and points for McLaren was performed. Similar analysis can be performed for any desired constructor.
+
+![image](https://user-images.githubusercontent.com/76491891/126873746-c2f6493c-8a30-4001-9fa1-5fa7f488d2e5.png)
+
+- The correlation between stops and milliseconds is 0.37, which indicate a low correlation.
+- The correlation between stops and points is 0.73, which can be considered highly correlated.
+- The correlation between points and milliseconds is 0.3, which indicate a low correlation.
