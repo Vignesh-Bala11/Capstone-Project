@@ -30,4 +30,4 @@ The team got access to data directly from F1 through Kaggle and upon initial ana
 ## Communications protocol
 We created a Slack group amongst the contributors which was the major communication channel. The idea was to brainstorm things out as they came up and the slack channel served as a medium to help troubleshoot things.
 
-We also had a biweekly zoom meeting cadence to discuss the larger picture and for course correction of the project, if needed.
+We also have zoom meeting cadence set up twice a week, to discuss the larger picture and for course correction of the project, if needed.
