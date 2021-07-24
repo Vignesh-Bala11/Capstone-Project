@@ -23,6 +23,10 @@ The team got access to data directly from F1 through Kaggle and upon initial ana
  ## Segmented Race Strategies: Initial Model
  Post [exploratory analysis](https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Trial%20Code%20-%20ML%20-%20Rama/races_ETL.ipynb), our data consisted of data on the finishing status for each driver and constructor for each circuit over the last few decades. This would help us build a [model](https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Trial%20Code%20-%20ML%20-%20Rama/initialML.ipynb) that would cluster historical performance of constructors depending on the circuits. Further cleaning of data can result in clusters which can help us add qualitative inputs to algorithm-created clusters to output segmented race strategies instead of a vanilla strategy for all races. 
 
+## Dashboard:
+- Tableau will be used to build the dashboard [(blueprint)](https://docs.google.com/presentation/d/178P-xTV-8FXRA3GOYNs0mXqrstW9Om0cytCS2QPis3Q/edit?usp=sharing) and will include graphs from exploratory analysis and storyboarding.
+- A webpage (blueprint) will be created with interactive elements to predict the race outcome using the user selected input values.
+
 ## Communications protocol
 We created a Slack group amongst the contributors which was the major communication channel. The idea was to brainstorm things out as they came up and the slack channel served as a medium to help troubleshoot things.
 
