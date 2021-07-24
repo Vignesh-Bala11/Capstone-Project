@@ -31,3 +31,15 @@ The team got access to data directly from F1 through Kaggle and upon initial ana
 We created a Slack group amongst the contributors which was the major communication channel. The idea was to brainstorm things out as they came up and the slack channel served as a medium to help troubleshoot things.
 
 We also have zoom meeting cadence set up twice a week, to discuss the larger picture and for course correction of the project, if needed.
+
+## Exploratory Analysis
+### Nationality of Racer vs Wins in Home Country
+This analysis attempts to identify if there is a higher likelihood for a racer to win a race in their home country. A new home win column was created with a Yes or No if the racer nationality and country of the race are the same. A win is defined as any of the top three positions. To visualize the results of the analysis, a bar chart and pie chart are used.
+
+![image](https://user-images.githubusercontent.com/76491891/126873338-0f32c13d-4be8-4873-a0e7-636fc41b8d53.png)
+
+British nationality racers have the highest home wins.
+
+![image](https://user-images.githubusercontent.com/76491891/126873359-7d127860-0cc5-42b6-a6ba-91e110de9d62.png)
+
+Only 8.1% of the racers have won in their home country.
