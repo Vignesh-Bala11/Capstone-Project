@@ -21,7 +21,7 @@ The team got access to data directly from F1 through Kaggle and upon initial ana
 
 ## Dashboard:
 - Tableau will be used to build the dashboard [(blueprint)](https://docs.google.com/presentation/d/178P-xTV-8FXRA3GOYNs0mXqrstW9Om0cytCS2QPis3Q/edit?usp=sharing) and will include graphs from exploratory analysis and storyboarding.
-- A webpage (blueprint) will be created with interactive elements to predict the race outcome using the user selected input values.
+- A webpage [(blueprint)](https://github.com/Vignesh-Bala11/Capstone-Project/blob/main/Dashboard_blueprints/webpage_blueprint.pptx) will be created with interactive elements to predict the race outcome using the user selected input values.
 
 ## Communications protocol
 We created a Slack group amongst the contributors which was the major communication channel. The idea was to brainstorm things out as they came up and the slack channel served as a medium to help troubleshoot things.
