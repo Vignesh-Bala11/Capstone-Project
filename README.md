@@ -112,14 +112,14 @@ The correlation between pit stops and points for McLaren was performed. Similar 
 ### 1. Fastest Lap Speeds and Lap times
 
 Comparing the fastest lap times at circuit(location) level, we find that the median fastest times are varying across circuits. This could be a factor based on which circuits can be clustered.
-
-<p align="center"><img src="https://user-images.githubusercontent.com/76491891/126873723-8b3ef08a-9806-4c23-b764-d8908413c064.png" width=500></p>
+<p align="center"><img src="https://github.com/Vignesh-Bala11/Capstone-Project/blob/main/Resources/Images/fastestLaptimes.PNG" width=500></p>
 
 ### 2. Finishing status
 
 The circuits also have differing characteristics in terms of cars finishing the race or not. There is also a difference in the types of Did Not Finish(DNF) which will play a role in the strategy that constructors can use for different circuits.
+The image below shows the accident occurances at different circuits. It can be clearly seen that each circuit has differening characteristics with respect to accidents, and a similar trend can be seen across all DNF and Finished statuses.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/76491891/126873723-8b3ef08a-9806-4c23-b764-d8908413c064.png" width=500></p> 
+<p align="center"><img src="https://github.com/Vignesh-Bala11/Capstone-Project/blob/main/Resources/Images/accident.PNG" width=500></p> 
 
 ## Answering Questions through Machine Learning Models
 
@@ -166,8 +166,8 @@ For our Machine Learning Model, we selected clustering models on differing facto
 
 The limitation of answering this question in the way we chose is that there is further qualitative input required to piece the puzzle together. Someone without an understanding of Formula-1 wouldn't be able to make sense of the clusters. The benefit, however, is the ability to create race strategies at circuit level depending on environmental and design characteristics of the circuits which will help teams perform better and increase race preperation efficiency.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/76491891/126873723-8b3ef08a-9806-4c23-b764-d8908413c064.png" width=500></p>
+The below images shows the clustering of circuits according to speed(proxied using fastest lap times).
+<p align="center"><img src="https://github.com/Vignesh-Bala11/Capstone-Project/blob/main/Resources/Images/speed_circuits.png" width=500></p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/76491891/126873723-8b3ef08a-9806-4c23-b764-d8908413c064.png" width=500></p>
-
-
+The below images shows the clustering of circuits according to weather (rainy and cloudy).
+<p align="center"><img src="https://github.com/Vignesh-Bala11/Capstone-Project/blob/main/Resources/Images/rainy_circuits.png" width=500></p>
