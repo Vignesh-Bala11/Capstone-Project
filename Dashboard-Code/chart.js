@@ -1,3 +1,7 @@
 function init() {
-    // First Drop down element
-}
+    d3.json("data1.json").then(function(data){
+        console.log(data);
+    });
+};
+
+init();
