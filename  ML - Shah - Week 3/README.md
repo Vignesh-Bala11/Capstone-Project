@@ -58,7 +58,11 @@ Correct Race Winner | Random Forrest | Support Vector Machine | Logistic Regress
 ------------ | ------------- | ------------- | ------------- | -------------
 2019 | 10 out 21 | 12 out 21 | 8 out 21 | 11 out 21
 
+The SVM Model performed the best for predicting the race winner. However for prediciting all race positions, the random forrest model performed the best out of the 4. We are summerizing the performnace of these two models for different aspects below. 
 
+#### Predicting Race Winners
+As we can see below, the both models performed similarly when predicting race winners with the SVM model performing slighly better (12 out of 21 races for 2019 which is equal to 57% of total races). 
+<p align="center"><img src="https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Resources/Images/Accuracy%20of%20Predicted%20Winners.png" width=500></p>
 
 
 
