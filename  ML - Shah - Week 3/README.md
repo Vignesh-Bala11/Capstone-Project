@@ -44,8 +44,21 @@ The limitation of this approach was however the fact that model would predict a 
 All machine learning models have been trained using data from the year 2000 to the 2018 season. The 2019 year has been used as a test population. In addition, as we have mentioned above, we have also used 2018 and 2017 as test populations with 2000-2017 and 2000-2016 as train populations respectively. There will be no further training of the model since our population is not expanding or changing. Since we are not using results from the current season (2021), our datasets are static and therefore doesn't require further training. 
 
 The Summary for the model Accuracy scores are provided below: 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+Accuracy Score | Random Forrest | Support Vector Machine | Logistic Regression | Neural Net
+------------ | ------------- | ------------- | ------------- | -------------
+2019 | 94.52% | 95.00% | 93.81% | 95.00%
+2018 | 94.48% | 95.00% | 95.00% | 94.99%
+2017 | 94.75% | 95.00% | 94.75% | 95.00%
+2019-2018 | 95.12% | 95.00% | 94.40% | 95.00%
+2019-2017 | 94.76% | 95.00% | 94.52% | 95.00%
+
+As explained above, the Model is not smart enough to determine that every race needs a winner. Therefore for many races, the model did not assign any winner. In order to bypass this, we looked into the probabilities for each outcome and assigned the racer with the highest probability of win for a race as the winner. Based on this approach, our Models performed the following in regards to predicting the Race Winner: 
+
+Correct Race Winner | Random Forrest | Support Vector Machine | Logistic Regression | Neural Net
+------------ | ------------- | ------------- | ------------- | -------------
+2019 | 10 out 21 | 12 out 21 | 8 out 21 | 11 out 21
+
+
+
+
 
