@@ -7,21 +7,23 @@ The feature engineering and selection processes was determined by our explorator
 After the initial feature selection and engineering, we performed additional data processing to include secondary features such as driver age, driver’s number of wins and league position before the start of the race and constructor’s number of wins and league position before the race. After including them in our models, we noted that they did not lead to any improvements in our race predictions. As a result, when running our models, we excluded these secondary features and reverted back to our original features. 
 
 Overall, the features or inputs used for our machine learnings models are: 
-•	Year: denotes the year of the race
-•	Round: denotes the nth number of race (the first race is round 1)
-•	CircuitId: encoded number representing the circuit for the race
-•	DriverId: encoded number representing the driver 
-•	ConstructorId: encoded number representing the team/constructor
-•	Grid: the starting position of the driver
-•	Weather_warm: a binary response with 1 representing warm and 0 not warm
-•	Weather_cold: a binary response with 1 representing cold and 0 not cold
-•	Weather_dry: a binary response with 1 representing dry and 0 not dry
-•	Weather_wet: a binary response with 1 representing wet and 0 not wet
-•	Weather_cloudy: a binary response with 1 representing cloudy and 0 not cloudy
+ - Year: denotes the year of the race
+ - Round: denotes the nth number of race (the first race is round 1)
+ - CircuitId: encoded number representing the circuit for the race
+ - DriverId: encoded number representing the driver 
+ - ConstructorId: encoded number representing the team/constructor
+ - Grid: the starting position of the driver
+ - Weather_warm: a binary response with 1 representing warm and 0 not warm
+ - Weather_cold: a binary response with 1 representing cold and 0 not cold
+ - Weather_dry: a binary response with 1 representing dry and 0 not dry
+ - Weather_wet: a binary response with 1 representing wet and 0 not wet
+ - Weather_cloudy: a binary response with 1 representing cloudy and 0 not cloudy
 
 ### Description of how data was split into training and testing sets
 
-We split the training and testing datasets based on years. All data prior to the 2019 season was considered training dataset while the 2019 season racing outcomes were considered testing datasets.  The reason we are using years as a defining factor to split the two datasets is the impact it has on sports. Almost every competition is defined by the a year-long schedule (aka a “season”) or small time frame held a within a year (such as Olympics 2021 or FIFA World Cup 2018). It is extremely rare for a competition winner to be decided based on performances over multiple years. Therefore, splitting datasets by year provides the best real-life use of any form of sporting outcome predictive model. Since the purpose of our machine learning model is to test a real theory that Formula 1 as a sport has become very predictable, we believe the success of our machine learning model’s ability to predict a full season’s outcome will provide far greater insight than its success based on random one-off races spread over multiple years. 
+We split the training and testing datasets based on years. All data prior to the 2019 season was considered training dataset while the 2019 season racing outcomes were considered testing datasets.  The reason we are using years as a defining factor to split the two datasets is the impact it has on sports. Almost every competition is defined by the year-long schedule (aka a “season”) or small timeframe held a within a year (such as Olympics 2021 or FIFA World Cup 2018 which are held over consecutive months within the same calendar year). It is extremely rare for a competition winner to be decided based on performances over multiple years. Therefore, splitting datasets by year provides the best real-life use of any form of sporting outcome predictive model. Since the purpose of our machine learning model is to test a real theory that Formula 1 as a sport has become very predictable, we believe the success of our machine learning model’s ability to predict a full season’s outcome will provide far greater insight than its success based on random one-off races spread over multiple years. 
+
+One way we tried to solve the disparity between using different years as test population and observe whether there were significant changes in our model’s performance. In addition to 2019, we used 2018 as a test population (2000-2017 as train population) and 2017 as test population (2000-2016) as test population. As we will show in our following sections, there weren’t significant fluctuations or fluctuations with a specific trend in the model’s performance which shows that using a single season as test population was appropriate. 
 
 It should be noted that we selected the 2019 and not 2020 season (which is more recent) as our test set was due to the impact of Covid 19 on all sporting events. The 2020 season was cut short and held at one-off venues which were subsequently dropped from the calendar in 2021 as F1 got back to its regular calendar. 
 
