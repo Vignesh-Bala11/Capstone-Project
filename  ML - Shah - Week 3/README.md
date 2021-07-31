@@ -39,5 +39,13 @@ An F1 Grand Prix has twenty drivers competing to win the race. Therefore, when b
 
 The limitation of this approach was however the fact that model would predict a significant number of races with no winners. **Since the model was not smart enough to understand that every race must have a winner, we had to tweak the race outcome function to predicting probabilities for each driver. We then sorted the probabilities in order which would essentially set out our predicted finishing grid for a race. Therefore, a driver finishing with the highest probability (even if it is below 50%) would be considered the race winner by our model.**
 
+## Description of how the model has been trained AND Description of current accuracy scores
 
+All machine learning models have been trained using data from the year 2000 to the 2018 season. The 2019 year has been used as a test population. In addition, as we have mentioned above, we have also used 2018 and 2017 as test populations with 2000-2017 and 2000-2016 as train populations respectively. There will be no further training of the model since our population is not expanding or changing. Since we are not using results from the current season (2021), our datasets are static and therefore doesn't require further training. 
+
+The Summary for the model Accuracy scores are provided below: 
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
 
