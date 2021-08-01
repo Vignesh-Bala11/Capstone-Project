@@ -60,9 +60,31 @@ Correct Race Winner | Random Forrest | Support Vector Machine | Logistic Regress
 
 The SVM Model performed the best for predicting the race winner. However for prediciting all race positions, the random forrest model performed the best out of the 4. We are summerizing the performnace of these two models for different aspects below. 
 
-#### Predicting Race Winners
+#### Accuracy of Race Winner Predictions
 As we can see below, the both models performed similarly when predicting race winners with the SVM model performing slighly better (12 out of 21 races for 2019 which is equal to 57% of total races). 
-<p align="center"><img src="https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Resources/Images/Accuracy%20of%20Predicted%20Winners.png" width=500></p>
+<p align="center"><img src="https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Resources/Images/Accuracy%20of%20Predicted%20Winners.png" length=300></p>
+
+In addition to predicting winners, we also checked how many times our predicted winners finished in the top 2 and top 3. As we can see, the RNF model performed very well here with performances always greater than 80%.  
+<p align="center"><img src="https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Resources/Images/Accuracy%20of%20Predicted%20Winner%20in%20Podium%20.png" length=300></p>
+
+#### Accuracy of all Race Finishes
+In addition to predicting winners, we expanded our analysis to see how well our models perform when predicting all race positions. Below we have presented our results of the model's performance on predicting each race position for all 21 races of the season and the same thing with a spread of 2. As we can see below, the RNF model performed better than SVM with scores around th 35% mark. However, when we add a spread of 2, our accuracy scores for the RNF model increases beyond the 70% mark. 
+<p align="center"><img src="https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Resources/Images/Accuracy%20of%20Predicted%20Finishes.png" length=300></p>
+<p align="center"><img src="https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Resources/Images/Accuracy%20of%20Predicted%20Finishes%20with%20a%20spread%20of%202.png" length=300></p>
+
+#### Accuracy of Race Bin Predictions
+In addition to predicting indivdual positions, we grouped the outcomes to specific groups to see whether the model performed differently for different positions. The groups are: 
+ - Bin 1: Positions 1,2 & 3
+ - Bin 2: Positions 4,5 & 6
+ - Bin 3: Positions 7,8,9 & 10
+ - Bin 4: Positions 11 and greater
+
+When the data is grouped or binned, the RNF model's prediction accuracy reaches the high 70%. When reviewing specific bins, it can be seen that both models perform well for Bin 1 and Bin 4 which shows that there there is higher levels of predictability at the top and bottom of the grid. 
+ <p align="center"><img src="https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Resources/Images/Accuracy%20of%20Predicted%20Bins.png" length=300></p>
+
+#### Overall Analysis
+From the performance of the models, we can conclude that there is fair levels of predictability in the sport. Even though individually, our models were only able to achieve a maximum 57% level of accuracy, our model was very good in predicting whether the winner will finish at least in the top 3. Secondly, when we add a spread of 2, our model performs well for all positions. Finally when we bin the data, our models again perform well predicting all bins. This shows that there are low levels of variability within the F1 grid. Drivers who are considered "front runners" will always finish at the front and drivers who are considered "back markers" will remain as back markers. This also shows it is very rare for a race to result in a very unpredictable winner. 
+
 
 
 
