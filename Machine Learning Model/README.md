@@ -1,4 +1,13 @@
-## Question-1 Race Predictability: Machine Learning Model
+
+### Description of preliminary data processing
+
+As already described, our data is accessed directly through F1 through Kaggle. This data is stored in a Postgres database hosted on AWS. The necessary data from this database is extracted into Python where we perform our preliminary data processing. If required, before the datasets are imported into python, some datasets are joined to create a new dataset directly within Postgres. For example, we joined the weather and results datasets into within Postgress to create a new dataset (results_weather). 
+
+The results_weather dataset is imported into python alongside a second dataset (races). After these two datasets have been merged, we have a complete table. This dataset has information such as driver, constructor, racing circuit, starting grid position and weather data for the race. All of this information will be used as inputs for our machine learning model. After this we performed some additional clean-up such as replace null values with 0s and filtering the table to disregard information before the year 2000. With the level if technological and regulation changes that take place in F1, we concluded that taking information before 2000 was simply not practical. That being said, we did note that even taking a twenty-year period (2000 to 2019) was long for a dynamic sport like F1. We also created output columns such as “Win” which is a binary column with a 1 for “win” and 0 for “not win”. A second output column called “podium” is also created. This is also a binary column with a 1 for driver finishing in the podium (top-three position) and 0 for not podium. 
+
+The [notebook](https://github.com/Vignesh-Bala11/Capstone-Project/blob/main/Machine%20Learning%20Model/Q1.Race%20Predictability/ETL/1.%20Race_Predictor_ETL.ipynb) containing our preliminary data processing has been included in this repository.
+
+## Question-1 Race Predictability
 
 ### Description of preliminary feature engineering and preliminary feature selection, including their decision-making process
 
@@ -29,9 +38,9 @@ It should be noted that we selected the 2019 and not 2020 season (which is more 
 
 ### Explanation of model choice, including limitations and benefits AND Explanation of changes in the models from Segment 2 to Segment 3. 
 
-The [ETL](https://github.com/Vignesh-Bala11/Capstone-Project/tree/Shah_Repo/%20ML%20-%20Shah%20-%20Week%203/ETL) process was tweaked  for Segment 3 to bring in additional inputs which were age, driver wins and driver position before the race and finally constructor win and constructor points before the race. As we have discussed above, included these inputs did not result in any improvement in the model’s performance (in fact it hindered the performance) and hence we decided to exclude them from the final model. 
+The ETL process was tweaked  for Segment 3 to bring in additional inputs which were age, driver wins and driver position before the race and finally constructor win and constructor points before the race. As we have discussed above, included these inputs did not result in any improvement in the model’s performance (in fact it hindered the performance) and hence we decided to exclude them from the final model. 
 
-For our Machine Learning Model, we selected classification models as our outputs represent discreate outcomes (in most cases our outputs are binary “yes” and “no” outcomes). For the our analysis for Segment 1 and Segment 2, we used three classification models: [Logistic Regression](https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/%20ML%20-%20Shah%20-%20Week%203/ML%20-%202019/1.%20Race_Predictor_Logistic_2019.ipynb), [Support Vector Machine](https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/%20ML%20-%20Shah%20-%20Week%203/ML%20-%202019/2.%20Race_Predictor_SVM_2019.ipynb) Classification and [Random Forrest](https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/%20ML%20-%20Shah%20-%20Week%203/ML%20-%202019/3.%20Race_Predictor_RNF_2019.ipynb) Classification. For Segment 3, we added an additinal model which was using [Neural Net](https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/%20ML%20-%20Shah%20-%20Week%203/ML%20-%202019/4.%20Race_Predictor_NN_2019.ipynb) Classification. 
+For our Machine Learning Model, we selected classification models as our outputs represent discreate outcomes (in most cases our outputs are binary “yes” and “no” outcomes). For the our analysis for Segment 1 and Segment 2, we used three classification models: [Logistic Regression](https://github.com/Vignesh-Bala11/Capstone-Project/blob/main/Machine%20Learning%20Model/Q1.Race%20Predictability/ML%20-%202019/1.%20Race_Predictor_Logistic_2019.ipynb), [Support Vector Machine](https://github.com/Vignesh-Bala11/Capstone-Project/blob/main/Machine%20Learning%20Model/Q1.Race%20Predictability/ML%20-%202019/2.%20Race_Predictor_SVM_2019.ipynb) Classification and [Random Forrest](https://github.com/Vignesh-Bala11/Capstone-Project/blob/main/Machine%20Learning%20Model/Q1.Race%20Predictability/ML%20-%202019/3.%20Race_Predictor_RNF_2019.ipynb) Classification. For Segment 3, we added an additinal model which was using [Neural Network](https://github.com/Vignesh-Bala11/Capstone-Project/blob/main/Machine%20Learning%20Model/Q1.Race%20Predictability/ML%20-%202019/4.%20Race_Predictor_NN_2019.ipynb) Classification. 
 
 We used the same inputs for this new model which were used for the other three. In segment 2, we had only used 2019 as a test population but as we have discussed above, for Segment 3, we have expanded our test populations to include 2017, 2018, 2019, 2018 to 2019 (2 years) and 2017 to 2019 (3 years) as test population to see if there were any marked differences in model performance when test population was changed or expanded. 
 
@@ -85,6 +94,26 @@ When the data is grouped or binned, the RNF model's prediction accuracy reaches 
 #### Overall Analysis
 From the performance of the models, we can conclude that there is fair levels of predictability in the sport. Even though individually, our models were only able to achieve a maximum 57% level of accuracy, our model was very good in predicting whether the winner will finish at least in the top 3. Secondly, when we add a spread of 2, our model performs well for all positions. Finally when we bin the data, our models again perform well predicting all bins. This shows that there are low levels of variability within the F1 grid. Drivers who are considered "front runners" will always finish at the front and drivers who are considered "back markers" will remain as back markers. This also shows it is very rare for a race to result in a very unpredictable winner. 
 
+## Question-2 Segmented Race Strategies
+
+### Description of preliminary feature engineering and preliminary feature selection, including their decision-making process
+The feature engineering and selection processes was determined by our exploratory analysis. As our analysis has shown, there are differing factors on which we can segment race circuits using clustering algorithms. Therefore, we believe these were natural inclusions as clustering features in our model. We used weather as an input because weather can play a part in any form of outdoor sporting event so we concluded that as another natural selection. We considered the altitudes of circuits and whether that could play a role in determining the outcome. However, as we can see in our exploratory analysis, there was no marked change in the performance of constructors which suggested that altitudes did not play a major role in performance of individual cars (aka any impact of altitude was either non-existent or universal).
+
+### Description of how data was split into training and testing sets
+
+Since we used unsupervised machine learning to answer this question, we didn't split the data into train and test datasets. Instead we applied post-clustering qualitative analysis to comeout with strategies at circuit level.
+
+### Explanation of model choice, including limitations and benefits
+
+For our Machine Learning Model, we selected clustering models on differing factors to get output as clusters at circuit level. Our initial ML showed that we can use either KMeans or Heirarchial clustering models. For ease of detemining number of clusters through an elbow curve and model inertia, we used KMeans clustering to segment race circuits based on average of fastest lap times to determine fast, medium and slow circuits and based on weather to determine rainy, cloudy and dry circuits.
+
+The limitation of answering this question in the way we chose is that there is further qualitative input required to piece the puzzle together. Someone without an understanding of Formula-1 wouldn't be able to make sense of the clusters. The benefit, however, is the ability to create race strategies at circuit level depending on environmental and design characteristics of the circuits which will help teams perform better and increase race preperation efficiency.
+
+The below images shows the clustering of circuits according to speed(proxied using fastest lap times).
+<p align="center"><img src="https://github.com/Vignesh-Bala11/Capstone-Project/blob/main/Resources/Images/speed_circuits.png" width=500></p>
+
+The below images shows the clustering of circuits according to weather (rainy and cloudy).
+<p align="center"><img src="https://github.com/Vignesh-Bala11/Capstone-Project/blob/main/Resources/Images/rainy_circuits.png" width=500></p>
 
 
 
