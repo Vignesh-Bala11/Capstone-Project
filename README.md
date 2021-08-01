@@ -11,9 +11,9 @@ Alongside race predictability affecting competition fans have noted that certain
 The team got access to data directly from F1 through Kaggle and upon initial analysis we found that there is an abundance of historical data which can be used to create highly accurate ML models. Also, during initial observations we noted that the data provided was already cleaned and there creating databases, storing, and tiering the data would be less strenuous. The raw data is stored on a [Postgres](https://github.com/Vignesh-Bala11/Capstone-Project/blob/main/SQL_Connection/Sql_Connection.ipynb) database hosted on Amazon Web Services. We imported the necessary tables from our database, made the necessary ETL functions to create the final table or dataset to be used for the machine learning models. The Results and Weather tables are combined with left join and stored into a new table (results_weather) to help with machine learning models. The datasets are then exported back into the database. 
 
 
-## Question we would like to answer through ML-Model:
+## Questions we would like to answer through ML-Model:
 
-1) Are Races too Predictable?
+1) Are races predictable?
 2) Can we create segmented race strategies for Formula1 constructors depending on circuit level historical performance?
  
  ## Segmented Race Strategies: Initial Model
