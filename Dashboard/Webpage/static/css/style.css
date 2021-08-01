@@ -1,0 +1,9 @@
+body {
+    color: #ca0a0a
+}
+
+.jumbotron {
+    background-color: rgb(255, 255, 255);
+    background-size: 100% 100%;
+    text-align: left;
+}
