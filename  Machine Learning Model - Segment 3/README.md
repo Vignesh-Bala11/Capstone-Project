@@ -79,7 +79,7 @@ In addition to predicting indivdual positions, we grouped the outcomes to specif
  - Bin 3: Positions 7,8,9 & 10
  - Bin 4: Positions 11 and greater
 
-When the data is grouped or binned, the RNF model's prediction accuracy reaches the high 70%. When reviewing specific bins, it can be seen that both models perform well for Bin 1 and Bin 4 which shows that there there is higher levels of predictability at the top and bottom of the grid. 
+When the data is grouped or binned, the RNF model's prediction accuracy reaches the high 70%. When reviewing specific bins, it can be seen that both models perform well for Bin 1 and Bin 4 which shows that there there is higher levels of predictability at the top and bottom of the grid than the teams/drivers in the "midfield. 
  <p align="center"><img src="https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Resources/Images/Accuracy%20of%20Predicted%20Bins.png" length=300></p>
 
 #### Overall Analysis
