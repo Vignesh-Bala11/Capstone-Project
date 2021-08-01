@@ -17,13 +17,13 @@ The team got access to data directly from F1 through Kaggle and upon initial ana
 2) Can we create segmented race strategies for Formula1 constructors depending on circuit level historical performance?
  
  ## Segmented Race Strategies: Initial Model
- Post [exploratory analysis](https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Trial%20Code%20-%20ML%20-%20Rama/races_ETL.ipynb), our data consisted of data on the finishing status for each driver and constructor for each circuit over the last few decades. This would help us build a [model](https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Trial%20Code%20-%20ML%20-%20Rama/initialML.ipynb) that would cluster historical performance of constructors depending on the circuits. Further cleaning of data can result in clusters which can help us add qualitative inputs to algorithm-created clusters to output segmented race strategies instead of a vanilla strategy for all races. 
+ Post [analysis](https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Trial%20Code%20-%20ML%20-%20Rama/races_ETL.ipynb), our data consisted of data on the finishing status for each driver and constructor for each circuit over the last few decades. This would help us build a [model](https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Trial%20Code%20-%20ML%20-%20Rama/initialML.ipynb) that would cluster historical performance of constructors depending on the circuits. Further cleaning of data can result in clusters which can help us add qualitative inputs to algorithm-created clusters to output segmented race strategies instead of a vanilla strategy for all races. 
 
 ## Dashboard:
 - Tableau has been used to build the dashboard which includes storyboarding.
 - A webpage has been created with interactive elements to predict the race outcome using the user selected input values.
 
-## Exploratory Analysis [(Click here)](https://github.com/Vignesh-Bala11/Capstone-Project#race-predictibility-of-formula-1-racing_car-checkered_flag)
+## Exploratory Analysis [(Click here)](https://github.com/Vignesh-Bala11/Capstone-Project/tree/main/Exploratory_Analysis#race-predictibility-of-formula-1-racing_car-checkered_flag)
 
 ## Answering Questions through Machine Learning Models
 
