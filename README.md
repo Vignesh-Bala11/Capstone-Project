@@ -28,15 +28,15 @@ We explored the data to see if the sport indeed is too predictable as the fans f
 
 We performed initial exploratory analysis isolating potential features and testing their relationships or correlations with race outcomes or strategies. Our initial features included reviewing relationship of wins with items such as: driver nationality, driver starting position, driver position after 1st lap, constructor etc. 
 
-## Question-1 [Race Predictability](https://github.com/Vignesh-Bala11/Capstone-Project/tree/main/Machine%20Learning%20Model/Q1.Race%20Predictability): Machine Learning Model
+## Question-1 Race Predictability
 
 Based on the results of our exploratory analysis, we identified several factors which we believed could be used as features for a machine learning model which can predict race outcome. Using the data that we have extracted and the features selected, we created 4(four) machine learning models which was trained using our dataset and then used to predict race outcome for a selected test population. 
 
-For more details on our methodology, code and results, refer to the XYZ folder in the repository. 
+For more details on our methodology, code and results, refer to the ['Race Predictability'](https://github.com/Vignesh-Bala11/Capstone-Project/tree/main/Machine%20Learning%20Model/Q1.Race%20Predictability): Machine Learning Model folder in the repository. 
 
 
-## Question-2 [Segmented Race Strategies](https://github.com/Vignesh-Bala11/Capstone-Project/tree/main/Machine%20Learning%20Model/Q2.Segmented%20Strategies)
+## Question-2 Segmented Race Strategies
 
-Utilizing our exploratory analysis, we also looked at ways to segment or “cluster” our data in ways that could exhibit or show racing strategies teams can take to significantly impact race strategies. For more details on our methodology, code and results, refer to the XYZ folder for more details.
+Utilizing our exploratory analysis, we also looked at ways to segment or “cluster” our data in ways that could exhibit or show racing strategies teams can take to significantly impact race strategies. For more details on our methodology, code and results, refer to the ['Segmented Race Strategies'](https://github.com/Vignesh-Bala11/Capstone-Project/tree/main/Machine%20Learning%20Model/Q2.Segmented%20Strategies) folder for more details.
 
 ## Presentation [(Click here)](https://docs.google.com/presentation/d/1suKeNaafK2tlnj5kwkuA4b7zmjkAPdLwKHHvcHoQShQ/edit?usp=sharing)
