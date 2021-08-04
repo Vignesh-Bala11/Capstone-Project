@@ -4719,7 +4719,7 @@ function fetchSegments()
 {
   d3.json(segmentData).then(function(data) {
     segments=data
-    console.log(data)
+    // console.log(segments)
   })
 }
 function gauge()
@@ -4728,15 +4728,37 @@ function gauge()
   let speed = d3.select("#speed")
   let weather = d3.select("#weather")
   
-  console.log(speed)
+  console.log(race)
   document.getElementById("speed").innerHTML = ""
   document.getElementById("weather").innerHTML = ""
-  speed
-        .append("h4")
-        .text("Speed: "+race[0]['cluster1_q']);
+  // speed
+  //       .append("h4")
+  //       .text("Speed: "+race[0]['cluster1_q']);
   weather
         .append("h4")
         .text("Weather: "+race[0]['cluster2_q']);
+  if (race[0]['cluster2_q']=='Usally rainy and cloudy')
+  {
+  weather
+  .append("img")
+  .property("src","static/images/rainy.png")
+  .property("style","margin-left:15%")
+
+  }
+  else if(race[0]['cluster2_q']=='Cloudy but rarely rainy')
+  {
+  weather
+  .append("img")
+  .property("src","static/images/cloud.png")
+  .property("style","margin-left:15%")
+  }
+  else
+  {
+    weather
+  .append("img")
+  .property("src","static/images/sunny.png")
+  .property("style","margin-left:15%")
+  }  
   
   var gaugeData = [{value:race[0]['dnf%']*100,
   type:'indicator',
@@ -4753,11 +4775,50 @@ function gauge()
 }];
 
 var gaugeLayout = { 
-width: 600, height: 300, margin: { t: 0, b: 0 },paper_bgcolor: "rgba(182,212,194,0)"
+width: 500, height: 250, margin: { t: 0, b: 0 },paper_bgcolor: "rgba(182,212,194,0)",
+font: {
+  family: 'Formula1 Display',
+  color: 'white'}
 };
 
 // 6. Use Plotly to plot the gauge data and layout.
 Plotly.newPlot('gauge', gaugeData, gaugeLayout);
+
+let value
+let color
+if (race[0]['cluster1_q']=='fast')
+{
+  value = 3;
+  color = 'green'
+}
+else if(race[0]['cluster1_q']=='medium')
+{
+  value = 2;
+  color = 'lightgreen'
+}
+else
+{
+  value = 1;
+  color = 'orange'
+}
+var indicate = [{value:value,
+type:'indicator',
+mode:'gauge',
+title: { text: "<b>Speed of circuit: "+race[0]['cluster1_q'], font: { size: 18 } },
+gauge: { shape:'bullet',axis: { range: [null, 3] },
+bar: { color: color }
+}
+
+}]
+var layout2 = { 
+  width: 650, height: 50, margin: { t: 0, b: 0, l:280 },paper_bgcolor: "rgba(182,212,194,0)",
+  font: {
+    family: 'Formula1 Display',
+    color: 'white'}
+  };
+
+Plotly.newPlot('speed', indicate, layout2);
+
 }
 
 function onlyUnique(value, index, self) {
@@ -4777,7 +4838,8 @@ selcirc.append("option")
     selcirc.append("option")
       .text(sample)
       .attr('id',"circdrops")
-      .property("value", sample);
+      .property("value", sample)
+      .property("style","color: black");
     });
 }
 
@@ -4793,7 +4855,8 @@ function fetchDrivers()
     seldriv.append("option")
       .text(sample)
       .attr('id',"drivdrops")
-      .property("value", sample);
+      .property("value", sample)
+      .property("style","color: black");
     });
 }
 
@@ -4808,7 +4871,16 @@ function selectCircuit(value)
 
 function selectDriver(value)
 {
-  var circuit = tableData.filter(x=>x.Circuit == selcirc.node().value)
-  var driver = circuit.filter(x=>x.Driver_Name==value)
-  buildTable(driver) 
+  var driver = tableData.filter(x=>x.Driver_Name==value)
+  console.log(selcirc.node().value)
+  if(selcirc.node().value == "")
+  {
+    console.log("entered if")
+    buildTable(driver)
+  }
+  else
+  {
+  var circuit = driver.filter(x=>x.Circuit == selcirc.node().value)
+  buildTable(circuit) 
+  }
 }

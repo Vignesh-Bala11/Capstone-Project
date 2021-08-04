@@ -1,5 +1,29 @@
+@font-face {
+    font-family: 'Formula1 Display';
+    src: url('Formula1-Display-Regular.eot');
+    src: url('Formula1-Display-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Formula1-Display-Regular.woff2') format('woff2'),
+        url('Formula1-Display-Regular.woff') format('woff'),
+        url('Formula1-Display-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.your-style {
+    font-family: 'Formula1 Display';
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    color: #ca0a0a
+    color: #ffffff
+}
+
+.main_con{
+	background-image: url("../images/streaks.jpg");
+	background-size:cover;
+    background-position: center center;
 }
 
 .jumbotron {
@@ -22,8 +46,8 @@ body {
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Gill Sans, 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;;
-	font-size:13px;
+	font-family: 'Formula1 Display';
+   	font-size:13px;
 	font-weight:bold;
 	padding:6px 12px;
 	text-decoration:none;
@@ -36,4 +60,12 @@ body {
 .myButton:active {
 	position:relative;
 	top:1px;
+}
+
+.font18
+{
+	font-size: 18px;
+	font-weight: bolder;
+	text-align:justify;
+	margin-left: 15%;
 }
