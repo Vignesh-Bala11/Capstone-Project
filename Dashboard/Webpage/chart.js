@@ -4859,7 +4859,6 @@ function fetchDrivers()
       .property("style","color: black");
     });
 }
-
 function selectCircuit(value)
 {
   seldriv.node().value = ""
@@ -4868,7 +4867,6 @@ function selectCircuit(value)
   updatemap()
   gauge()
 }
-
 function selectDriver(value)
 {
   var driver = tableData.filter(x=>x.Driver_Name==value)
