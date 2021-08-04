@@ -3,7 +3,7 @@ var feature
 let selcircuit = d3.select("#selectCircuit")
 
 const API_KEY = "pk.eyJ1IjoicmFtYWRpdHlhNTI0IiwiYSI6ImNrb3NwcTF5NjAzZTIyc252cm9scGhub2QifQ.IF_qMBaHLJeTKcyIVuiBBw"
-let dark = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+let dark = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
 	maxZoom:  18,
 	accessToken: API_KEY
@@ -29,7 +29,7 @@ d3.json(circuitData).then(function(data) {
             var lng = feature.bbox[0]
             console.log(lat,lng);
             L.geoJSON(feature).addTo(map);
-            map.flyTo([lat,lng], 13)
+            map.flyTo([lat,lng], 14)
             ;
 
         }

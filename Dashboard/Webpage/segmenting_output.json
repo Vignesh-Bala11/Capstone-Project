@@ -45,7 +45,7 @@
         "location": "Malaysian Grand Prix",
         "dnf%": 0.2093023256,
         "cluster1_q": "medium",
-        "cluster2_q": "Cloudy but rarely rainy"
+        "cluster2_q": "Usally rainy and cloudy"
     },
     {
         "location": "French Grand Prix",
@@ -57,13 +57,13 @@
         "location": "Singapore Grand Prix",
         "dnf%": 0.2,
         "cluster1_q": "slow",
-        "cluster2_q": "Usally rainy and cloudy"
+        "cluster2_q": "Cloudy but rarely rainy"
     },
     {
         "location": "Australian Grand Prix",
         "dnf%": 0.25,
         "cluster1_q": "medium",
-        "cluster2_q": "Usally rainy and cloudy"
+        "cluster2_q": "Cloudy but rarely rainy"
     },
     {
         "location": "Mexican Grand Prix",
@@ -75,7 +75,7 @@
         "location": "Monaco Grand Prix",
         "dnf%": 0.2701421801,
         "cluster1_q": "slow",
-        "cluster2_q": "Usally rainy and cloudy"
+        "cluster2_q": "Cloudy but rarely rainy"
     },
     {
         "location": "Montmel\u00f3",
@@ -87,7 +87,7 @@
         "location": "Canadian Grand Prix",
         "dnf%": 0.1848341232,
         "cluster1_q": "medium",
-        "cluster2_q": "Usally rainy and cloudy"
+        "cluster2_q": "Cloudy but rarely rainy"
     },
     {
         "location": "Italian Grand Prix",
@@ -117,7 +117,7 @@
         "location": "Bahrain Grand Prix",
         "dnf%": 0.1652892562,
         "cluster1_q": "medium",
-        "cluster2_q": "Usally rainy and cloudy"
+        "cluster2_q": "Never rainy"
     },
     {
         "location": "Chinese Grand Prix",
