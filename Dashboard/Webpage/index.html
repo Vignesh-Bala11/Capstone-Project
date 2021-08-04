@@ -39,15 +39,14 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4">
-                    <h3>Enter Driver and Circuit below</h3>
-                    <br>
+                    <h3>Select Circuit and Driver below</h3>
                     <label for="selectCircuit">Circuit</label>
                     <select id="selectCircuit" onchange="selectCircuit(this.value)" class="select"></select>
                     <br>
                     <label for="selectDriver">Driver</label>
                     <select id="selectDriver" onchange="selectDriver(this.value)" class="select"></select>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-8">
                 <p>
                     In recent years Formula 1 has faced and continues to face harsh critisms that the races are far too predictable. The team decided to put this critism to the test but building multiple models and comparing the results to the official 2019 race results. <br><br> 2 models were used because the SVM model did a better job predicting who cames first while the Random forest models does a better job of predicting which bin a given racer falls into. Bins are position groups which racers fall into with bin 1 being the top 3 racers, bin 2 being the racers 4,5,6 and so on.
                 </p>
@@ -56,7 +55,6 @@
             </div>
         </div>
 
-    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
@@ -78,6 +76,11 @@
                 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
                 integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
                 crossorigin=""></script>
+            <div><h3>Race characteristics</h3></div>    
+            <div id="speed"></div>
+            <div id="weather"></div>
+                <div id="gauge"></div>
+
             </div>
             <div class="col-md-8">
                 <table class="table table-striped">
@@ -100,6 +103,8 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
     <script src="chart.js"></script>
     <script src="map.js"></script>  
 </body>

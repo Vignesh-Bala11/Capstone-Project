@@ -1,6 +1,9 @@
 let seldriv = d3.select("#selectDriver")
 let selcirc = d3.select("#selectCircuit")
 
+let segmentData = "https://rama-course-bucket.s3.us-east-2.amazonaws.com/segmenting_output.json";
+var segments
+
 // from data.js
 const tableData = [
     {
@@ -4710,6 +4713,53 @@ const tableData = [
 fetchCircuits()
 fetchDrivers()
 
+fetchSegments()
+
+function fetchSegments()
+{
+  d3.json(segmentData).then(function(data) {
+    segments=data
+    console.log(data)
+  })
+}
+function gauge()
+{
+  let race = segments.filter(x=>x.location==selcirc.node().value)
+  let speed = d3.select("#speed")
+  let weather = d3.select("#weather")
+  
+  console.log(speed)
+  document.getElementById("speed").innerHTML = ""
+  document.getElementById("weather").innerHTML = ""
+  speed
+        .append("h4")
+        .text("Speed: "+race[0]['cluster1_q']);
+  weather
+        .append("h4")
+        .text("Weather: "+race[0]['cluster2_q']);
+  
+  var gaugeData = [{value:race[0]['dnf%']*100,
+  type:'indicator',
+  mode:'gauge+number',
+  title: { text: "<b>Race Did Not Finish %", font: { size: 18 } },
+  gauge: { axis: { range: [null, 30] },
+  bar: { color: "black" },
+  steps: [
+    { range: [0, 10], color: "Green" },
+    { range: [10, 20], color: "Orange" },
+    { range: [20, 30], color: "Red" },
+  ]}
+
+}];
+
+var gaugeLayout = { 
+width: 400, height: 250, margin: { t: 0, b: 0 },paper_bgcolor: "rgba(182,212,194,0)"
+};
+
+// 6. Use Plotly to plot the gauge data and layout.
+Plotly.newPlot('gauge', gaugeData, gaugeLayout);
+}
+
 function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
@@ -4753,6 +4803,7 @@ function selectCircuit(value)
   var circuit = tableData.filter(x=>x.Circuit==value)
   buildTable(circuit)
   updatemap()
+  gauge()
 }
 
 function selectDriver(value)
