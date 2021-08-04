@@ -14,7 +14,7 @@ let map = L.map('map', {
 	zoom: 8,
 	layers: [dark]
 });
-let circuitData = "circuit_map.geojson";
+let circuitData = "https://rama-course-bucket.s3.us-east-2.amazonaws.com/circuit_map.geojson";
 
 function updatemap()
 {
