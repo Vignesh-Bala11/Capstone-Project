@@ -1,3 +1,6 @@
+let seldriv = d3.select("#selectDriver")
+let selcirc = d3.select("#selectCircuit")
+
 // from data.js
 const tableData = [
     {
@@ -4702,5 +4705,59 @@ const tableData = [
     d3.selectAll("input").on("change", updateFilters);
     
     // Build the table when the page loads
-    buildTable(tableData);
+    // buildTable(tableData);
+
+fetchCircuits()
+fetchDrivers()
+
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index;
+}
+
+function fetchCircuits()
+{
+selcirc.append("option")
+.text("")
+.property("value","")
   
+  d3.selectAll("#circdrops").remove()
+  var circuits = tableData.map(x=>x.Circuit)
+  var unique = circuits.filter(onlyUnique)
+  unique.forEach((sample) => {
+    selcirc.append("option")
+      .text(sample)
+      .attr('id',"circdrops")
+      .property("value", sample);
+    });
+}
+
+function fetchDrivers()
+{
+  seldriv.append("option")
+.text("")
+.property("value","")
+  d3.selectAll("#drivdrops").remove()
+  var drivers = tableData.map(x=>x.Driver_Name)
+  var unique = drivers.filter(onlyUnique)
+  unique.forEach((sample) => {
+    seldriv.append("option")
+      .text(sample)
+      .attr('id',"drivdrops")
+      .property("value", sample);
+    });
+}
+
+function selectCircuit(value)
+{
+  seldriv.node().value = ""
+  var circuit = tableData.filter(x=>x.Circuit==value)
+  buildTable(circuit)
+  updatemap()
+}
+
+function selectDriver(value)
+{
+  var circuit = tableData.filter(x=>x.Circuit == selcirc.node().value)
+  var driver = circuit.filter(x=>x.Driver_Name==value)
+  buildTable(driver) 
+}
