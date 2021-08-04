@@ -4741,7 +4741,7 @@ function gauge()
   var gaugeData = [{value:race[0]['dnf%']*100,
   type:'indicator',
   mode:'gauge+number',
-  title: { text: "<b>Race Did Not Finish %", font: { size: 18 } },
+  title: { text: "<b>% of Drivers that Did Not Finish", font: { size: 18 } },
   gauge: { axis: { range: [null, 30] },
   bar: { color: "black" },
   steps: [
@@ -4753,7 +4753,7 @@ function gauge()
 }];
 
 var gaugeLayout = { 
-width: 400, height: 250, margin: { t: 0, b: 0 },paper_bgcolor: "rgba(182,212,194,0)"
+width: 600, height: 300, margin: { t: 0, b: 0 },paper_bgcolor: "rgba(182,212,194,0)"
 };
 
 // 6. Use Plotly to plot the gauge data and layout.

@@ -24,8 +24,8 @@
                 <h4>Click below buttons to explore deeper analyses</h4>
                 <p>
                   <button class="myButton" onclick="location.href='https://public.tableau.com/app/profile/shah.kibria/viz/F1MLModelPerformanceSummary/Story1';">ML models</button>
-                  <button class="myButton" onclick="location.href='https://docs.google.com/presentation/d/1nxpZgJbVjU1BXuKt2p_Hu03IQ7DKmb6jsxG4QyDulzM/edit?usp=sharing';">Analysis storyboard</button>
-                  <button class="myButton" onclick="location.href='https://docs.google.com/presentation/d/1nxpZgJbVjU1BXuKt2p_Hu03IQ7DKmb6jsxG4QyDulzM/edit?usp=sharing';">Summary deck</button>
+                  <button class="myButton" onclick="location.href='https://public.tableau.com/views/ProjectDashboard_16276241496350/Storyboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link';">Analysis storyboard</button>
+                  <button class="myButton" onclick="location.href='https://docs.google.com/presentation/d/1suKeNaafK2tlnj5kwkuA4b7zmjkAPdLwKHHvcHoQShQ/edit#slide=id.ge74ce28f56_0_88';">Summary deck</button>
                 </p>
             </div>
         </div>
@@ -57,7 +57,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <!-- <form>
                     <p> Filter Search</p>
                     <ul class="list-group bg-white">
@@ -72,16 +72,19 @@
 
                     </ul>
                 </form> -->
-            <div id="map" style="width: 450px; height: 300px"></div>
+            <div id="map" style="width: 1000px; height: 600px"></div>
                 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
                 integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
                 crossorigin=""></script>
+            </div>
+            <div class="col-md-6">
             <div><h3>Race characteristics</h3></div>    
             <div id="speed"></div>
             <div id="weather"></div>
-                <div id="gauge"></div>
-
+                <br><div id="gauge"></div>
+            </div>  
             </div>
+            <div class="row">
             <div class="col-md-8">
                 <table class="table table-striped">
                     <thead>
@@ -99,6 +102,7 @@
                     </thead>
                     <tbody></tbody>
                 </table>
+            </div>
             </div>
         </div>
     </div>
