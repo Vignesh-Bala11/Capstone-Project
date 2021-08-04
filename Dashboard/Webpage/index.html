@@ -12,9 +12,11 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
+    <link rel="preload" href="Formula1-Display-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
       
 </head>
-<body class="bg-white">
+<body class="bg-white your-style main_con">
     <!-- <div class="wrapper"> -->
         <div class="container" >
             <div class="jumbotron">
@@ -24,8 +26,8 @@
                 <h4>Click below buttons to explore deeper analyses</h4>
                 <p>
                   <button class="myButton" onclick="location.href='https://public.tableau.com/app/profile/shah.kibria/viz/F1MLModelPerformanceSummary/Story1';">ML models</button>
-                  <button class="myButton" onclick="location.href='https://docs.google.com/presentation/d/1nxpZgJbVjU1BXuKt2p_Hu03IQ7DKmb6jsxG4QyDulzM/edit?usp=sharing';">Analysis storyboard</button>
-                  <button class="myButton" onclick="location.href='https://docs.google.com/presentation/d/1nxpZgJbVjU1BXuKt2p_Hu03IQ7DKmb6jsxG4QyDulzM/edit?usp=sharing';">Summary deck</button>
+                  <button class="myButton" onclick="location.href='https://public.tableau.com/views/ProjectDashboard_16276241496350/Storyboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link';">Analysis storyboard</button>
+                  <button class="myButton" onclick="location.href='https://docs.google.com/presentation/d/1suKeNaafK2tlnj5kwkuA4b7zmjkAPdLwKHHvcHoQShQ/edit#slide=id.ge74ce28f56_0_88';">Summary deck</button>
                 </p>
             </div>
         </div>
@@ -38,17 +40,17 @@
         </div> -->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" style="text-align: center;">
                     <h3>Select Circuit and Driver below</h3>
                     <label for="selectCircuit">Circuit</label>
-                    <select id="selectCircuit" onchange="selectCircuit(this.value)" class="select"></select>
+                    <select id="selectCircuit" onchange="selectCircuit(this.value)" class="select" style="color: black;"></select>
                     <br>
                     <label for="selectDriver">Driver</label>
-                    <select id="selectDriver" onchange="selectDriver(this.value)" class="select"></select>
+                    <select id="selectDriver" onchange="selectDriver(this.value)" class="select" style="color: black;"></select>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8" style="text-align: center;">
                 <p>
-                    In recent years Formula 1 has faced and continues to face harsh critisms that the races are far too predictable. The team decided to put this critism to the test but building multiple models and comparing the results to the official 2019 race results. <br><br> 2 models were used because the SVM model did a better job predicting who cames first while the Random forest models does a better job of predicting which bin a given racer falls into. Bins are position groups which racers fall into with bin 1 being the top 3 racers, bin 2 being the racers 4,5,6 and so on.
+                    In recent years Formula 1 has faced and continues to face harsh critisms that the races are far too predictable. The team decided to put this critism to the test but building multiple models and comparing the results to the official 2019 race results. <br><br> TWO models were used because the SVM model did a better job predicting who cames first while the Random forest models does a better job of predicting which bin a given racer falls into. Bins are position groups which racers fall into with bin 1 being racers that finish in the top 3, bin 2 being racers 4-6, bin 3 being racers 7-10 and bin 4 being racers 10 onwards.
                 </p>
             </div>
 
@@ -57,7 +59,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <!-- <form>
                     <p> Filter Search</p>
                     <ul class="list-group bg-white">
@@ -72,18 +74,25 @@
 
                     </ul>
                 </form> -->
-            <div id="map" style="width: 450px; height: 300px"></div>
+            <div id="map" style="width: 600px; height: 400px"></div>
                 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
                 integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
                 crossorigin=""></script>
-            <div><h3>Race characteristics</h3></div>    
-            <div id="speed"></div>
-            <div id="weather"></div>
-                <div id="gauge"></div>
-
             </div>
+            <div class="col-md-6">
+            <div style="margin-left: 15%;"><h2>Race characteristics</h2></div>
+            <br>   
+            <div id="speed"></div>
+            <hr>
+            <div id="weather" class="font18"></div>
+            <hr>
+            <div id="gauge"></div>
+            </div>  
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
             <div class="col-md-8">
-                <table class="table table-striped">
+                <table class="table">
                     <thead>
                         <tr>
                             <th>Circuit</th>
@@ -100,8 +109,13 @@
                     <tbody></tbody>
                 </table>
             </div>
+            <div class="col-md-2"></div>
+            </div>
         </div>
     </div>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <div>Icons made by <a href="" title="iconixar">iconixar</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
