@@ -1,3 +1,9 @@
+let seldriv = d3.select("#selectDriver")
+let selcirc = d3.select("#selectCircuit")
+
+let segmentData = "https://rama-course-bucket.s3.us-east-2.amazonaws.com/segmenting_output.json";
+var segments
+
 // from data.js
 const tableData = [
     {
@@ -4702,5 +4708,107 @@ const tableData = [
     d3.selectAll("input").on("change", updateFilters);
     
     // Build the table when the page loads
-    buildTable(tableData);
+    // buildTable(tableData);
+
+fetchCircuits()
+fetchDrivers()
+
+fetchSegments()
+
+function fetchSegments()
+{
+  d3.json(segmentData).then(function(data) {
+    segments=data
+    console.log(data)
+  })
+}
+function gauge()
+{
+  let race = segments.filter(x=>x.location==selcirc.node().value)
+  let speed = d3.select("#speed")
+  let weather = d3.select("#weather")
   
+  console.log(speed)
+  document.getElementById("speed").innerHTML = ""
+  document.getElementById("weather").innerHTML = ""
+  speed
+        .append("h4")
+        .text("Speed: "+race[0]['cluster1_q']);
+  weather
+        .append("h4")
+        .text("Weather: "+race[0]['cluster2_q']);
+  
+  var gaugeData = [{value:race[0]['dnf%']*100,
+  type:'indicator',
+  mode:'gauge+number',
+  title: { text: "<b>Race Did Not Finish %", font: { size: 18 } },
+  gauge: { axis: { range: [null, 30] },
+  bar: { color: "black" },
+  steps: [
+    { range: [0, 10], color: "Green" },
+    { range: [10, 20], color: "Orange" },
+    { range: [20, 30], color: "Red" },
+  ]}
+
+}];
+
+var gaugeLayout = { 
+width: 400, height: 250, margin: { t: 0, b: 0 },paper_bgcolor: "rgba(182,212,194,0)"
+};
+
+// 6. Use Plotly to plot the gauge data and layout.
+Plotly.newPlot('gauge', gaugeData, gaugeLayout);
+}
+
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index;
+}
+
+function fetchCircuits()
+{
+selcirc.append("option")
+.text("")
+.property("value","")
+  
+  d3.selectAll("#circdrops").remove()
+  var circuits = tableData.map(x=>x.Circuit)
+  var unique = circuits.filter(onlyUnique)
+  unique.forEach((sample) => {
+    selcirc.append("option")
+      .text(sample)
+      .attr('id',"circdrops")
+      .property("value", sample);
+    });
+}
+
+function fetchDrivers()
+{
+  seldriv.append("option")
+.text("")
+.property("value","")
+  d3.selectAll("#drivdrops").remove()
+  var drivers = tableData.map(x=>x.Driver_Name)
+  var unique = drivers.filter(onlyUnique)
+  unique.forEach((sample) => {
+    seldriv.append("option")
+      .text(sample)
+      .attr('id',"drivdrops")
+      .property("value", sample);
+    });
+}
+
+function selectCircuit(value)
+{
+  seldriv.node().value = ""
+  var circuit = tableData.filter(x=>x.Circuit==value)
+  buildTable(circuit)
+  updatemap()
+  gauge()
+}
+
+function selectDriver(value)
+{
+  var circuit = tableData.filter(x=>x.Circuit == selcirc.node().value)
+  var driver = circuit.filter(x=>x.Driver_Name==value)
+  buildTable(driver) 
+}
