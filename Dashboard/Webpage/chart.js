@@ -4627,7 +4627,7 @@ const tableData = [
       Driver_Name: "Carlos Sainz"
     }
   ]
-  
+
   // get table references
   var tbody = d3.select("tbody");
   
