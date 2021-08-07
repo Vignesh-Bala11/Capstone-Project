@@ -39,4 +39,4 @@ For more details on our methodology, code and results, refer to the ['Race Predi
 
 Utilizing our exploratory analysis, we also looked at ways to segment or “cluster” our data in ways that could exhibit or show racing strategies teams can take to significantly impact race strategies. For more details on our methodology, code and results, refer to the ['Segmented Race Strategies'](https://github.com/Vignesh-Bala11/Capstone-Project/tree/main/Machine%20Learning%20Model/Q2.Segmented%20Strategies) folder for more details.
 
-## Presentation [(Click here)](https://docs.google.com/presentation/d/1suKeNaafK2tlnj5kwkuA4b7zmjkAPdLwKHHvcHoQShQ/edit?usp=sharing)
+## Presentation [(Click here)](https://docs.google.com/presentation/d/1u97TjOL777yrLXLrih05Ko4bS8BsdLjE_jCYlDLDVe8/edit?usp=sharing)
