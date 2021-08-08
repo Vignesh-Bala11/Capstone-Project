@@ -7,7 +7,7 @@ The results_weather dataset is imported into python alongside a second dataset (
 
 The [notebook](https://github.com/Vignesh-Bala11/Capstone-Project/blob/main/Machine%20Learning%20Model/Q1.Race%20Predictability/ETL/1.%20Race_Predictor_ETL.ipynb) containing our preliminary data processing has been included in this repository.
 
-## Question-1 Race Predictability
+## Question-1 Race Predictability :racing_car: :checkered_flag:
 
 ### Description of preliminary feature engineering and preliminary feature selection, including their decision-making process
 
@@ -61,13 +61,20 @@ Accuracy Score | Random Forrest | Support Vector Machine | Logistic Regression |
 2019-2018 | 95.12% | 95.00% | 94.40% | 95.00%
 2019-2017 | 94.76% | 95.00% | 94.52% | 95.00%
 
-As explained above, the Model is not smart enough to determine that every race needs a winner. Therefore for many races, the model did not assign any winner. In order to bypass this, we looked into the probabilities for each outcome and assigned the racer with the highest probability of win for a race as the winner. Based on this approach, our Models performed the following in regards to predicting the Race Winner: 
+As explained above, the Model is not smart enough to determine that every race needs a winner. Therefore for many races, the model did not assign any winner. In order to bypass this, we looked into the probabilities for each outcome and assigned the racer with the highest probability of win for a race as the winner. Based on this approach, our Model's Accuracy Score in regards to predicting the Race Winner (both in absolute numbers and percentages) are provided below: 
 
 Correct Race Winner | Random Forrest | Support Vector Machine | Logistic Regression | Neural Net
 ------------ | ------------- | ------------- | ------------- | -------------
 2019 | 10 out 21 | 12 out 21 | 8 out 21 | 11 out 21
+------------ | ------------- | ------------- | ------------- | -------------
+2019 | 48% | 57% | 38% | 52%
 
 The SVM Model performed the best for predicting the race winner. However for prediciting all race positions, the random forrest model performed the best out of the 4. We are summerizing the performnace of these two models for different aspects below. 
+
+#### Confusion Matrix
+We did not include a confusion matrix highlighting the precision and recall scores for our predictions. This is due to the fact that precision and recall will always be equal for the question we are trying to answer. The number of outcomes in any sporting event are always fixed. For example, in a Formula 1 race, by default there will always be 1 winner and 19 non-winners since only one driver can win the race. In the same way, when creating a race predictor for an F1 season, any predicitive model will always predict 21 winners for 21 races. Hence for a 21 race season with 20 drivers in each race, we will always have 21 positive outcomes and 399 negative outcomes. Therefore the challenge for the model is not to get the number of winners correct but rather predicting those 21 winners accurately. 
+
+Therefore, when we calculate the precision or recall, false negative and false positive is always equal (since the number of each type of outcomes are fixed). As a result, we have not provided additional information for confusion matrix as precision and recall is always equal and therefore presenting the same information twice will not add any additional value to the user. 
 
 #### Accuracy of Race Winner Predictions
 As we can see below, the both models performed similarly when predicting race winners with the SVM model performing slighly better (12 out of 21 races for 2019 which is equal to 57% of total races). 
@@ -91,8 +98,10 @@ In addition to predicting indivdual positions, we grouped the outcomes to specif
 When the data is grouped or binned, the RNF model's prediction accuracy reaches the high 70%. When reviewing specific bins, it can be seen that both models perform well for Bin 1 and Bin 4 which shows that there there is higher levels of predictability at the top and bottom of the grid than the teams/drivers in the "midfield. 
  <p align="center"><img src="https://github.com/Vignesh-Bala11/Capstone-Project/blob/Shah_Repo/Resources/Images/Accuracy%20of%20Predicted%20Bins.png" length=300></p>
 
-#### Overall Analysis
-From the performance of the models, we can conclude that there is fair levels of predictability in the sport. Even though individually, our models were only able to achieve a maximum 57% level of accuracy, our model was very good in predicting whether the winner will finish at least in the top 3. Secondly, when we add a spread of 2, our model performs well for all positions. Finally when we bin the data, our models again perform well predicting all bins. This shows that there are low levels of variability within the F1 grid. Drivers who are considered "front runners" will always finish at the front and drivers who are considered "back markers" will remain as back markers. This also shows it is very rare for a race to result in a very unpredictable winner. 
+#### Overall Analysis and whether the model addresses the question or problem we wanted to answer
+From the performance of the models, we can conclude that there is fair levels of predictability in the sport. Even though individually, our models were only able to achieve a maximum 57% level of accuracy, our model was very good in predicting whether the winner will finish at least in the top 3 (the Random Forrest model achieved a 100% score in that regard for 2019). Secondly, when we add a spread of 2, our model performs well for all positions (Accuracy scores in the high 70s for all three test populations). Finally when we bin the data, our models again perform well predicting all bins (once again accuracy scores in the high 70s for all three test populations). This shows that there are low levels of variability within the F1 grid. Drivers who are considered "front runners" will always finish at the front and drivers who are considered "back markers" will remain as back markers. This also shows it is very rare for a race to result in a very unpredictable winner. 
+
+Overall our predictive model could highlight clear trends in regrads top predictability of the sport and make meaningful predictions. Therefore we believe our model addresses the problem we wanted to answer. 
 
 ## Question-2 Segmented Race Strategies
 
