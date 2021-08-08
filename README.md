@@ -22,7 +22,8 @@ We explored the data to see if the sport indeed is too predictable as the fans f
 - Tableau has been used to build the [dashboard](https://public.tableau.com/views/ProjectDashboard_16276241496350/Storyboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link) which includes a storyboard.
 - A [webpage](https://github.com/Vignesh-Bala11/Capstone-Project/tree/main/Dashboard/Webpage) has been created with interactive elements to predict the race outcome using the user selected input values.
 
-![Webpage_screenshot](https://user-images.githubusercontent.com/74985818/127781659-21f78bec-46e7-47d5-8014-c6d1a53bf8bb.png)
+![Screenshot 2021-08-08 120004](https://user-images.githubusercontent.com/57723459/128648714-08dfc688-e161-491d-81fd-d4d0d2f08b39.png)
+
 
 ## Answering Questions through Machine Learning Models
 
