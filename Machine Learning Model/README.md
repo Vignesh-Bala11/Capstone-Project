@@ -66,7 +66,6 @@ As explained above, the Model is not smart enough to determine that every race n
 Correct Race Winner | Random Forrest | Support Vector Machine | Logistic Regression | Neural Net
 ------------ | ------------- | ------------- | ------------- | -------------
 2019 | 10 out 21 | 12 out 21 | 8 out 21 | 11 out 21
------------- | ------------- | ------------- | ------------- | -------------
 2019 | 48% | 57% | 38% | 52%
 
 The SVM Model performed the best for predicting the race winner. However for prediciting all race positions, the random forrest model performed the best out of the 4. We are summerizing the performnace of these two models for different aspects below. 
