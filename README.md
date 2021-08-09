@@ -23,7 +23,7 @@ We explored the data to see if the sport indeed is too predictable as the fans f
 - A [webpage](https://github.com/Vignesh-Bala11/Capstone-Project/tree/main/Dashboard/Webpage) has been created with interactive elements to predict the race outcome using the user selected input values.
 
 ![Screenshot 2021-08-08 120004](https://user-images.githubusercontent.com/57723459/128648714-08dfc688-e161-491d-81fd-d4d0d2f08b39.png)
-
+[See it in action](https://github.com/Vignesh-Bala11/Capstone-Project/blob/main/Dashboard/My%20Movie%208.mov)
 
 ## Answering Questions through Machine Learning Models
 
